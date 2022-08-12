@@ -1,10 +1,19 @@
 import styled from "styled-components";
+import { mixinCard, mixinCardText } from "../mixins";
 import bgCardFront from "../assets/bg-card-front.png";
 import cardLogo from "../assets/card-logo.svg";
 
-export const CardExpiry = styled.p``;
+export const CardExpiry = styled.p`
+  ${mixinCardText}
+  font-size: 0.95rem;
+  letter-spacing: 0.1rem;
+`;
 
-export const CardHolder = styled.p``;
+export const CardHolder = styled.p`
+  ${mixinCardText}
+  font-size: 0.95rem;
+  letter-spacing: 0.1rem;
+`;
 
 export const BottomContainer = styled.div`
   display: flex;
@@ -14,20 +23,26 @@ export const BottomContainer = styled.div`
   width: 100%;
 `;
 
-export const CardNumber = styled.p``;
+export const CardNumber = styled.p`
+  ${mixinCardText}
+  font-size: 1.55rem;
+  letter-spacing: 0.175rem;
+`;
 
 export const CardLogo = styled.img`
   margin-bottom: auto;
 `;
 
 export const CardFrontContainer = styled.div`
+  ${mixinCard}
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 27.938rem;
-  height: 15.313rem;
+  align-self: flex-start;
+  gap: 1.3rem;
   background: url(${bgCardFront});
+  padding: 2rem;
 `;
 
 const CardFront = ({ className }) => {

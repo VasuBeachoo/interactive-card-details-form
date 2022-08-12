@@ -8,6 +8,8 @@ export const CardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 1.5rem;
+  width: 34rem;
 `;
 
 export const AppContainer = styled.div`
@@ -16,6 +18,7 @@ export const AppContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  gap: 6rem;
 `;
 
 const App = () => {

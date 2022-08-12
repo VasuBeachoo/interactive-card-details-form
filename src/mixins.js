@@ -1,0 +1,34 @@
+import { css } from "styled-components";
+
+export const mixinCard = css`
+  width: 27.938rem;
+  height: 15.313rem;
+  user-select: none;
+  border-radius: 1rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+`;
+
+export const mixinCardText = css`
+  width: fit-content;
+  color: var(--White);
+  opacity: 0.9;
+  margin: 0;
+`;
+
+export const mixinInput = css`
+  font-size: 0.95rem;
+  border: 0.1rem solid var(--Light-grayish-violet);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.6rem 1rem;
+  transition: 0.2s;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border-color: var(--Very-dark-violet);
+  }
+`;

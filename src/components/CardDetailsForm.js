@@ -1,28 +1,56 @@
 import styled from "styled-components";
+import { mixinInput } from "../mixins.js";
 
 export const ConfirmBtn = styled.input.attrs({
   type: "submit",
-  value: "Confirm",
-})``;
+})`
+  width: 100%;
+  user-select: none;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: 0.25s;
 
-export const DateInput = styled.input.attrs({ type: "date" })``;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const DateContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+`;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.5rem;
 `;
 
-export const TextInput = styled.input.attrs({ type: "text" })``;
+export const TextInput = styled.input.attrs({ type: "text" })`
+  ${mixinInput}
+  width: 100%;
+`;
 
-export const Label = styled.label``;
+export const Label = styled.label`
+  color: var(--Very-dark-violet);
+  font-size: 1rem;
+`;
 
 export const LabelContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
+  gap: 0.4rem;
 `;
 
 export const FormContainer = styled.div`
@@ -30,6 +58,8 @@ export const FormContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.5rem;
+  width: 22rem;
 `;
 
 export const DetailsForm = styled.form``;
@@ -49,7 +79,10 @@ const CardDetailsForm = ({ className }) => {
         <Container>
           <LabelContainer>
             <Label htmlFor="exp-date-input">EXP. DATE (MM/YY)</Label>
-            <DateInput id="exp-date-input" />
+            <DateContainer>
+              <TextInput placeholder="MM" />
+              <TextInput placeholder="YY" />
+            </DateContainer>
           </LabelContainer>
           <LabelContainer>
             <Label htmlFor="cvc-input">CVC</Label>

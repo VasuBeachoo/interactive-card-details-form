@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import { mixinCard, mixinCardText } from "../mixins";
 import bgCardBack from "../assets/bg-card-back.png";
 
 export const Cvc = styled.p`
-  transform: translate(22.85rem, 5.95rem);
+  ${mixinCardText}
+  font-size: 0.9rem;
+  letter-spacing: 0.125rem;
+  transform: translate(22.375rem, 7rem);
 `;
 
 export const CardBackContainer = styled.div`
-  width: 27.938rem;
-  height: 15.313rem;
+  ${mixinCard}
+  align-self: flex-end;
   background: url(${bgCardBack});
 `;
 
