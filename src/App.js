@@ -3,6 +3,7 @@ import GlobalStyle from "./GlobalStyle";
 import CardFront from "./components/CardFront";
 import CardBack from "./components/CardBack";
 import CardDetailsForm from "./components/CardDetailsForm";
+import CompletedView from "./components/CompletedView";
 
 export const CardsContainer = styled.div`
   display: flex;
@@ -29,7 +30,7 @@ const App = () => {
         <CardFront />
         <CardBack />
       </CardsContainer>
-      <CardDetailsForm />
+      <CompletedView />
     </AppContainer>
   );
 };

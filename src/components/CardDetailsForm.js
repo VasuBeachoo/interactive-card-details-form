@@ -1,21 +1,10 @@
 import styled from "styled-components";
-import { mixinInput } from "../mixins.js";
+import { mixinInput, mixinBtn } from "../mixins.js";
 
 export const ConfirmBtn = styled.input.attrs({
   type: "submit",
 })`
-  width: 100%;
-  user-select: none;
-  background-color: var(--Very-dark-violet);
-  color: var(--White);
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
-  transition: 0.25s;
-
-  &:hover {
-    cursor: pointer;
-  }
+  ${mixinBtn}
 `;
 
 export const DateContainer = styled.div`

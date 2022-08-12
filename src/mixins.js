@@ -32,3 +32,19 @@ export const mixinInput = css`
     border-color: var(--Very-dark-violet);
   }
 `;
+
+export const mixinBtn = css`
+  text-align: center;
+  width: 100%;
+  user-select: none;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: 0.25s;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
