@@ -45,14 +45,37 @@ export const CardFrontContainer = styled.div`
   padding: 2rem;
 `;
 
-const CardFront = ({ className }) => {
+const CardFront = ({ className, name, number, month, year }) => {
+  const displayNumber = (cardNum) => {
+    let numberString = cardNum;
+    for (let i = cardNum.length; i < 19; i++) {
+      if (i % 5 === 4) {
+        numberString += " ";
+      } else {
+        numberString += "0";
+      }
+    }
+    return numberString;
+  };
+
+  const displayDate = (date) => {
+    let dateString = "";
+    for (let i = date.length; i < 2; i++) {
+      dateString += "0";
+    }
+    dateString += date;
+    return dateString;
+  };
+
   return (
     <CardFrontContainer className={className}>
       <CardLogo src={cardLogo} alt="card-logo" />
-      <CardNumber>0000 0000 0000 0000</CardNumber>
+      <CardNumber>{displayNumber(number)}</CardNumber>
       <BottomContainer>
-        <CardHolder>Jane Appleseed</CardHolder>
-        <CardExpiry>00/00</CardExpiry>
+        <CardHolder>{name === "" ? "Jane Appleseed" : name}</CardHolder>
+        <CardExpiry>
+          {displayDate(month)}/{displayDate(year)}
+        </CardExpiry>
       </BottomContainer>
     </CardFrontContainer>
   );

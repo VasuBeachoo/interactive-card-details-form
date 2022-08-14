@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import GlobalStyle from "./GlobalStyle";
 import CardFront from "./components/CardFront";
@@ -23,14 +24,31 @@ export const AppContainer = styled.div`
 `;
 
 const App = () => {
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
+  const [cvc, setCvc] = useState("");
+
   return (
     <AppContainer>
       <GlobalStyle />
       <CardsContainer>
-        <CardFront />
-        <CardBack />
+        <CardFront name={name} number={number} month={month} year={year} />
+        <CardBack cvc={cvc} />
       </CardsContainer>
-      <CompletedView />
+      <CardDetailsForm
+        name={name}
+        setName={setName}
+        number={number}
+        setNumber={setNumber}
+        month={month}
+        setMonth={setMonth}
+        year={year}
+        setYear={setYear}
+        cvc={cvc}
+        setCvc={setCvc}
+      />
     </AppContainer>
   );
 };

@@ -15,10 +15,18 @@ export const CardBackContainer = styled.div`
   background: url(${bgCardBack});
 `;
 
-const CardBack = ({ className }) => {
+const CardBack = ({ className, cvc }) => {
+  const displayCvc = (cvc) => {
+    let cvcString = cvc;
+    for (let i = cvc.length; i < 3; i++) {
+      cvcString += "0";
+    }
+    return cvcString;
+  };
+
   return (
     <CardBackContainer className={className}>
-      <Cvc>000</Cvc>
+      <Cvc>{displayCvc(cvc)}</Cvc>
     </CardBackContainer>
   );
 };
