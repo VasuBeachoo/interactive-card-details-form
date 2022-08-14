@@ -137,6 +137,7 @@ const CardDetailsForm = ({
     else if (
       (parseInt(month).toString().length !== 2 && month[0] !== "0") ||
       (parseInt(year).toString().length !== 2 && year[0] !== "0") ||
+      parseInt(month) === 0 ||
       parseInt(month) > 12
     )
       return "Invalid date";
