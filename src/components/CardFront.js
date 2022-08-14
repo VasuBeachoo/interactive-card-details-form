@@ -59,11 +59,10 @@ const CardFront = ({ className, name, number, month, year }) => {
   };
 
   const displayDate = (date) => {
-    let dateString = "";
+    let dateString = date;
     for (let i = date.length; i < 2; i++) {
       dateString += "0";
     }
-    dateString += date;
     return dateString;
   };
 

@@ -24,11 +24,21 @@ export const AppContainer = styled.div`
 `;
 
 const App = () => {
+  const [completed, setCompleted] = useState(false);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
   const [cvc, setCvc] = useState("");
+
+  const resetForm = () => {
+    setName("");
+    setNumber("");
+    setMonth("");
+    setYear("");
+    setCvc("");
+    setCompleted(false);
+  };
 
   return (
     <AppContainer>
@@ -37,18 +47,23 @@ const App = () => {
         <CardFront name={name} number={number} month={month} year={year} />
         <CardBack cvc={cvc} />
       </CardsContainer>
-      <CardDetailsForm
-        name={name}
-        setName={setName}
-        number={number}
-        setNumber={setNumber}
-        month={month}
-        setMonth={setMonth}
-        year={year}
-        setYear={setYear}
-        cvc={cvc}
-        setCvc={setCvc}
-      />
+      {completed ? (
+        <CompletedView resetForm={resetForm} />
+      ) : (
+        <CardDetailsForm
+          name={name}
+          setName={setName}
+          number={number}
+          setNumber={setNumber}
+          month={month}
+          setMonth={setMonth}
+          year={year}
+          setYear={setYear}
+          cvc={cvc}
+          setCvc={setCvc}
+          submitForm={() => setCompleted(true)}
+        />
+      )}
     </AppContainer>
   );
 };

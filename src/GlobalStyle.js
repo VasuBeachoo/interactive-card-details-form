@@ -9,6 +9,7 @@ const GlobalStyle = styled.createGlobalStyle`
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
     --Very-dark-violet: hsl(278, 68%, 11%);
+    --Red: rgb(255, 0, 0);
 
     --Font-family: "Space Grotesk", sans-serif;
   }

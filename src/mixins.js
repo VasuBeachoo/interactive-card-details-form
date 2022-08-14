@@ -19,6 +19,12 @@ export const mixinCardText = css`
 export const mixinInput = css`
   font-size: 0.95rem;
   border: 0.1rem solid var(--Light-grayish-violet);
+  ${(props) =>
+    props.showErrors &&
+    css`
+      border-color: ${(props) =>
+        props.errorMsg === "" ? "var(--Light-grayish-violet)" : "var(--Red)"};
+    `};
   border-radius: 0.5rem;
   outline: none;
   padding: 0.6rem 1rem;
@@ -40,11 +46,14 @@ export const mixinBtn = css`
   background-color: var(--Very-dark-violet);
   color: var(--White);
   font-size: 1rem;
+  border: 0.2rem solid var(--Very-dark-violet);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
   transition: 0.25s;
 
   &:hover {
     cursor: pointer;
+    background-color: var(--White);
+    color: var(--Very-dark-violet);
   }
 `;

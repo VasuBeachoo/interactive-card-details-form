@@ -36,13 +36,13 @@ export const CompletedContainer = styled.div`
   width: 22rem;
 `;
 
-const CompletedView = ({ className }) => {
+const CompletedView = ({ className, resetForm }) => {
   return (
     <CompletedContainer className={className}>
       <CompletedIcon />
       <CompletedHeading>THANK YOU!</CompletedHeading>
       <CompletedParagraph>We've added your card details</CompletedParagraph>
-      <CompletedBtn>Continue</CompletedBtn>
+      <CompletedBtn onClick={resetForm}>Continue</CompletedBtn>
     </CompletedContainer>
   );
 };
