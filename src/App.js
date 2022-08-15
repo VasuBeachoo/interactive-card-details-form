@@ -11,7 +11,12 @@ export const CardsContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   gap: 1.5rem;
-  width: 34rem;
+  min-width: 34rem;
+
+  @media (max-width: 1050px) {
+    flex-direction: column-reverse;
+    min-width: 70%;
+  }
 `;
 
 export const AppContainer = styled.div`
@@ -20,7 +25,16 @@ export const AppContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  gap: 6rem;
+  gap: 5rem;
+  padding: 1rem;
+
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding: 4rem 1rem 0;
+  }
 `;
 
 const App = () => {

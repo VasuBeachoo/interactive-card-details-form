@@ -43,6 +43,14 @@ export const CardFrontContainer = styled.div`
   gap: 1.3rem;
   background: url(${bgCardFront});
   padding: 2rem;
+
+  @media (max-width: 1050px) {
+    transform: translateY(-7rem);
+  }
+
+  @media (max-width: 500px) {
+    align-self: center;
+  }
 `;
 
 const CardFront = ({ className, name, number, month, year }) => {

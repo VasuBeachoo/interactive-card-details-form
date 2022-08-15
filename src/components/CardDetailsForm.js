@@ -56,7 +56,14 @@ export const FormContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-  width: 22rem;
+  width: 25rem;
+  background-color: var(--White);
+  border-radius: 0.75rem;
+  padding: 2rem;
+
+  @media (max-width: 1050px) {
+    transform: translateY(-4.5rem);
+  }
 `;
 
 export const DetailsForm = styled.form``;

@@ -13,6 +13,10 @@ export const CardBackContainer = styled.div`
   ${mixinCard}
   align-self: flex-end;
   background: url(${bgCardBack});
+
+  @media (max-width: 500px) {
+    align-self: center;
+  }
 `;
 
 const CardBack = ({ className, cvc }) => {

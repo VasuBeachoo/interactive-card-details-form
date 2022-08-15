@@ -1,8 +1,8 @@
 import { css } from "styled-components";
 
 export const mixinCard = css`
-  width: 27.938rem;
-  height: 15.313rem;
+  min-width: 27.938rem;
+  min-height: 15.313rem;
   user-select: none;
   border-radius: 1rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,

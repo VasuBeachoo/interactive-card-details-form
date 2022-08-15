@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import bgMainDesktop from "./assets/bg-main-desktop.png";
+import bgMainMobile from "./assets/bg-main-mobile.png";
 
 const styled = { createGlobalStyle };
 
@@ -23,6 +24,11 @@ const GlobalStyle = styled.createGlobalStyle`
     background: url(${bgMainDesktop}) no-repeat;
     background-size: 37vw;
     margin: 0;
+
+    @media (max-width: 1050px) {
+      background: url(${bgMainMobile}) no-repeat;
+      background-size: 110vw;
+    }
   }
 `;
 
