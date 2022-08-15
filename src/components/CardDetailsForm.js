@@ -4,7 +4,7 @@ import { mixinInput, mixinBtn } from "../mixins.js";
 
 export const ConfirmBtn = styled.input.attrs({
   type: "submit",
-  value: "Submit",
+  value: "Confirm",
 })`
   ${mixinBtn}
 `;
